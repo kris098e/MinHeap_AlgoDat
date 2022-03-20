@@ -5,22 +5,22 @@ public class PQTester {
 
          Random random = new Random();
         PQheap heap = new PQheap();
-        
+
         for( int i = 0; i < 100; i++) {
             Element temp = new Element( random.nextInt( 1000 ), new Object() );
             heap.insert(temp);
         }
-        
+
         heap.insert( new Element( 34 , new Object() ));
         heap.insert( new Element( 645 , new Object() ));
         heap.insert( new Element( -45 , new Object() ));
 
         heap.printHeap();
-        /**
+
         for(int i = 0; i < 6; i++) {
             System.out.print( heap.extractMin().getKey() + ", ");
         }
-        */
+
 
     }
 }

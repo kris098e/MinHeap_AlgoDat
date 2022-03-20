@@ -7,10 +7,11 @@ public class PQheap implements PQ {
     public PQheap() {
         list = new ArrayList<>();
     }
-    
+
     public Element extractMin() {
         Element key = list.get( 0 );
-        list.set( 0, list.get( list.size() - 1) );
+        list.remove(0);
+        list.add( 0, list.get( list.size() - 1) );
         minHeapify( 0 );
         return key;
     }
@@ -19,7 +20,7 @@ public class PQheap implements PQ {
             int l = left( index );
             int r = right( index );
             int smallest;
-            if( l < ( list.size() - 1 ) && list.get( l ).getKey() < list.get( index ).getKey() ) 
+            if( l < ( list.size() - 1 ) && list.get( l ).getKey() < list.get( index ).getKey() )
                 smallest = l;
             else smallest = index;
             if( r < ( list.size() - 1) && list.get( r ).getKey() < list.get( smallest ).getKey() )
@@ -27,7 +28,7 @@ public class PQheap implements PQ {
             if( smallest != index ) {
                 exchange( index, smallest );
                 minHeapify( smallest );
-            } 
+            }
     }
 
     private static int left( int index ) {
