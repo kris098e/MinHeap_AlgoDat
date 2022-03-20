@@ -10,8 +10,8 @@ public class PQheap implements PQ {
 
     public Element extractMin() {
         Element key = list.get( 0 );
-        list.remove(0);
-        list.add( 0, list.get( list.size() - 1) );
+        list.set( 0, list.get( list.size() - 1) );
+        list.remove(list.size() - 1)
         minHeapify( 0 );
         return key;
     }
