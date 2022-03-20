@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class PQSort { 
     public static void main(String[] args) {
 
-	PQHeap pq = new PQHeap();
+	PQ pq = new PQHeap();
 	int n = 0;
 	Scanner sc = new Scanner(System.in);
 	while (sc.hasNextInt()) {
