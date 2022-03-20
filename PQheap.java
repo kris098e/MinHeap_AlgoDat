@@ -20,10 +20,10 @@ public class PQHeap implements PQ {
             int l = left( index );
             int r = right( index );
             int smallest;
-            if( l < ( list.size() - 1 ) && list.get( l ).getKey() < list.get( index ).getKey() )
+            if( l <= ( list.size() - 1 ) && list.get( l ).getKey() < list.get( index ).getKey() )
                 smallest = l;
             else smallest = index;
-            if( r < ( list.size() - 1) && list.get( r ).getKey() < list.get( smallest ).getKey() )
+            if( r <= ( list.size() - 1) && list.get( r ).getKey() < list.get( smallest ).getKey() )
                 smallest = r;
             if( smallest != index ) {
                 exchange( index, smallest );
@@ -56,5 +56,10 @@ public class PQHeap implements PQ {
         Element temp = list.get( index1 );
         list.set( index1, list.get( index2 ) );
         list.set( index2, temp );
+    }
+    public void printHeap() {
+        for(int i = 0; i < list.size(); i++) {
+            System.out.print(list.get( i ).getKey() + ", ");
+        }
     }
 }
