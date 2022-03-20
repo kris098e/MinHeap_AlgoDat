@@ -1,10 +1,10 @@
 import java.util.ArrayList;
 
-public class PQheap implements PQ {
+public class PQHeap implements PQ {
 
     private ArrayList< Element > list;
 
-    public PQheap() {
+    public PQHeap() {
         list = new ArrayList<>();
     }
 
