@@ -3,7 +3,7 @@ import java.util.Random;
 public class PQTester {
     public static void main( String[] args ) {
 
-         Random random = new Random();
+        Random random = new Random();
         PQheap heap = new PQheap();
 
         for( int i = 0; i < 100; i++) {
@@ -14,8 +14,6 @@ public class PQTester {
         heap.insert( new Element( 34 , new Object() ));
         heap.insert( new Element( 645 , new Object() ));
         heap.insert( new Element( -45 , new Object() ));
-
-        heap.printHeap();
 
         for(int i = 0; i < 103; i++) {
             System.out.print( heap.extractMin().getKey() + ", ");

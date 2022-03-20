@@ -57,9 +57,4 @@ public class PQheap implements PQ {
         list.set( index1, list.get( index2 ) );
         list.set( index2, temp );
     }
-
-    public void printHeap() {
-        for (int i = 0; i < list.size(); i++)
-        System.out.print(list.get(i).getKey() + ", ");
-    }
 }
