@@ -2,7 +2,7 @@
  * Gruppe:
  * Philip Jos Rosenlund Andersen, Phand18@student.sdu.dk
  * Kristian Degn Abrahamsen, Krabr21@student.sdu.dk
- * Andreas Viby, Andje21@student.sdu.dk
+ * Andreas Viby Jensen, Andje21@student.sdu.dk
  */
 
 import java.util.ArrayList;
