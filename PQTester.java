@@ -17,7 +17,7 @@ public class PQTester {
 
         heap.printHeap();
 
-        for(int i = 0; i < 6; i++) {
+        for(int i = 0; i < 103; i++) {
             System.out.print( heap.extractMin().getKey() + ", ");
         }
 
